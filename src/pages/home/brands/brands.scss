@@ -1,0 +1,62 @@
+page-brands {
+    .home-slide ion-slides .radius{
+        height:120px;
+        width:100%;
+    }
+    .brands-card{
+        margin:0px;
+        margin-bottom: 15px;
+        width: 100%;
+        border:none;
+    }
+    .brand-img{
+        height:150px;
+        width: 100%;
+        
+    }
+    .brand-img img{
+        height: 100%;
+        width:100%;
+       
+        
+        
+    }
+    .brands-card ion-card-content ion-row{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .brands-card ion-card-content ion-row ion-col{
+        height:90px;
+        width: 70px;
+    }
+    .brands-card ion-card-content ion-row ion-col img{
+        height:80%;
+        width:80%;
+    }
+    .brands-card .card-content-md{
+        padding:0px;
+    }
+    .brand-name{
+        font-size:20px;
+        font-weight: bold;
+        padding-left:7px;
+        font-family: 'Franklin Gothic Medium';
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        box-shadow: 2px 2px gray;
+        margin-left: 20px;
+        width:50%;
+        background-color: white;
+        
+        
+        
+
+    }
+
+    //price class here is used to override the one in app.scss
+    .price{
+        padding-left:20px;
+        font-weight: 100;
+        font-size:12px;
+    }
+}

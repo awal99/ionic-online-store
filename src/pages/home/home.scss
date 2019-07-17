@@ -1,0 +1,175 @@
+page-home {
+  a{
+    text-decoration: none;
+  }
+
+  ion-scroll{
+    white-space: nowrap;
+    height: 250px;;
+  }
+  .card-content-md{
+    padding:0px;
+  }
+  .products-card-content img{
+    height: 100px;
+    width : 100%;
+  }
+  .products-card-content .label-md{
+    margin:0px;
+  }
+  .products-card-content{
+    padding-left:0px;
+  }
+  .products-card a{
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  .products-card{
+    width: 100%;
+    padding:0px;
+    margin:0px;
+    max-height: 160px;
+    height:160px;
+    box-shadow: none;
+    border:none;
+    padding-right:10px;
+   
+  }
+  .products-card ion-card-content{
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom: 0px;
+  }
+
+  .brands-card-content img,.stores-card-content img{
+    height:130px;
+    width: 100%;
+  }
+  .brands-card,.stores-card{
+    height:130px;
+    width: 100%;
+  }
+  .brands-card ion-card-content,.store-card ion-card-content{
+    padding:0px;
+  }
+
+  .brands-card-content .label-md,.stores-card-content .label-md{
+    margin:0px;
+  }
+
+  .brands-card-content,.stores-card-content{
+    padding:0px;
+    background-color:lavender;
+  }
+ .item-md.item-block .item-inner {padding:0px}
+  .products-row,.stores-row{
+    overflow-x: scroll!important;
+    overflow-y: hidden;
+    word-wrap: break-word;
+    .scroll-bar-indecator{
+      width: 0px;
+      background-color: transparent;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width:0;
+    background: transparent;
+  }
+
+  .flashdeals .scroll-bar-indecator{
+    display: hidden;
+  }
+  
+  .quicklinks a{
+    color: black;
+  }
+  .home-slide {
+    max-height: 350px;
+  }
+  
+  .lego {
+    background-color: #EBEBEC;
+    padding-bottom: 8px;
+  }
+  .lego__wrapper {
+    background: #ffffff;
+  }
+  .lego__header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .h1 {
+    font-size: 18px;
+  }
+
+  .umaylove-card{
+    max-height: 160px;
+    height:160px;
+    margin-left:0px;
+    border:none;
+    width:100%;
+    padding-left:10px;
+
+}
+
+.searchbar-md .searchbar-input{
+  background-color:white;
+  color: black;
+  border-bottom: 1px solid white;
+  width:90%;
+}
+.searchbar-md .searchbar-clear-icon{
+  margin-right: 25px;
+}
+
+.menu-col{
+  padding:0px;
+}
+
+.menu-col .navbarSearch-btn{
+  height:40px
+}
+.searchbar-col{
+  padding:0px;
+  padding-top:3px;
+  padding-left:5px;
+}
+.seachbar-wrapper{
+  margin-left: 30px;
+}
+.toolbar .searchbar-md
+{
+  padding-left:0px;
+}
+
+.umaylove-card-content img{
+  height: 110px;
+}
+.product-name{
+ text-overflow: ellipsis;
+overflow: hidden;
+ display: flex;
+ height:20px;
+}
+.umaylove-card-content{
+    padding-left:0px;
+    padding-right: 10px;
+    padding-top:0px;
+    padding-bottom: 0px;
+    display: block;
+    
+    height: 100%;
+}
+
+.umaylove-card-content .price{
+  position: flex;
+  bottom: 15px;
+}
+  
+}
+

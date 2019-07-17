@@ -1,0 +1,44 @@
+page-select-details {
+
+    .size{
+        margin-top:7px;
+    }
+    .size .col .item-md{
+        padding-left:0px;
+    }
+    .size .col .item-md .checkbox-md{
+        margin-right:5px;
+    } 
+    .sizeAndColor-card,
+    .optionalOffers-card{
+        margin:0px;
+        width:100%;
+    }
+
+    .color .col .item-md img{
+        width:100%;
+        max-height:50px;
+    }
+
+    .quantity-selector{
+        margin-top:9px;
+    }
+    .quantity-selector .row .col button{
+        width:50px;
+        height:20px
+    }
+    .discount1{
+        color:red;
+        font-style: italic;
+        font-size: 12px;
+        padding-left: 0px;
+        
+    }
+    
+    .quantity{
+        background-color: #f6f6f6;
+        opacity: 0.7;
+        font-size: 0.9em; 
+        border-bottom: 2px black;
+    }
+}

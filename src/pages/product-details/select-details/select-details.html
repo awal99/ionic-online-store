@@ -1,0 +1,84 @@
+
+<ion-header>
+    <ion-navbar>
+      <ion-title>Select Product Details</ion-title>
+      <ion-buttons end>
+        <button  style="color:white" ion-button icon-only (click)="dismiss()">
+          <ion-icon name='close'></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content >
+    <ion-card class="sizeAndColor-card" padding>
+        <span>Select Product Details</span>
+      <div class="size">
+        <span>Size</span>
+        <ion-row>
+          <ion-col col-4 *ngFor="let size of sizes; let i = index" [attr.data-index]="i">
+              <ion-item>
+                  <ion-checkbox name={{size.name}} [(ngModel)]="size.value" (click)="onSizeSelected(size.name,i)"></ion-checkbox>
+                  <ion-label>{{size.name}}</ion-label>
+             </ion-item>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="color">
+          <span>Color</span>
+          <ion-row>
+            <ion-col col-4 *ngFor="let color of colors; let i = index" [attr.data-index]="i">
+              <a (click)="onColorClick(i)" class="color-link">
+                <ion-item>
+                   <img src={{color.img}}>
+               </ion-item>
+              </a>
+            </ion-col>
+           
+          </ion-row>
+      </div>
+
+      <div class="quantity-selector">
+        <ion-row>
+          <ion-col col-3 >
+              <span style="text-align: left; padding-top:10px; display: flex"> Quantity</span>
+          </ion-col>
+          <ion-col col-3 style="justify-content: center;padding-top:10px;width:17%;max-width: 17%;">
+              <button ion-button color="danger" round (click)="onDecrease()"><ion-icon name="subtract"></ion-icon></button>
+          </ion-col>
+          <ion-col col-3>
+              <ion-input class="quantity" [(ngModel)]="selectedQuantity" type="number"></ion-input>
+          </ion-col>
+          <ion-col col-3 style="justify-content: center;padding-top:10px">
+              <button ion-button color="primary" round (click)="onIncrease()"><ion-icon name="add"></ion-icon></button>
+          </ion-col>
+        </ion-row>
+     
+      </div>
+
+      <div style="margin-top:9px">
+        <span style="margin-top:5px;font-weight: bold">Selected Details</span><br/>
+        {{selectedS}}, {{SelectedC}}, {{selectedQuantity}}
+      </div>
+
+      <div style="margin-top:10px;">
+        <span class="discount1">Please make sure you select the right size and color you want in other to avoid issues later.</span>
+      </div>
+    </ion-card>
+
+    <ion-card class="optionalOffers-card" padding>
+        <span style="margin-top:5px;font-weight: bold">Buy in Bundle</span><br/>
+        <p>Buy selected product with any of the products below at a discounted price.</p>
+
+
+    </ion-card>
+
+    <ion-footer class="actions-card">
+     <ion-item>
+       <span style="text-align: center">Sub-Total: GHS {{subtotal+shipping}}</span>
+     </ion-item>
+      <div>
+        <button ion-button full color="primary" (click)="onContinue()">Continue<ion-icon name="arrow-right"></ion-icon></button>
+      </div>
+    </ion-footer>
+  </ion-content>
+  

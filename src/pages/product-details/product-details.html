@@ -1,0 +1,199 @@
+
+<ion-content class="pContent">
+    <ion-navbar class="pnavbar">
+        <ion-title>productDetails</ion-title>
+    </ion-navbar>
+
+    <div class="product-slide">
+        <ion-slides loop="true" speed="500" pager="true">
+          <ion-slide>
+            <img class="radius"  src="../assets/imgs/slide_1.webp">
+          </ion-slide>
+    
+          <ion-slide>
+            <img class="radius"  src="../assets/imgs/slide_2.webp">
+          </ion-slide>
+    
+          <ion-slide>
+            <img class="radius"  src="../assets/imgs/slide_3.webp">
+          </ion-slide>
+    
+          <ion-slide>
+            <img class="radius"  src="../assets/imgs/slide_4.webp">
+          </ion-slide>
+    
+          <ion-slide>
+            <img class="radius"  src="../assets/imgs/slide_5.webp">
+          </ion-slide>
+    
+          <ion-slide>
+            <img class="radius" src="../assets/imgs/slide_6.webp">
+          </ion-slide>
+        </ion-slides>
+      </div>
+      
+      <ion-card class="item-description">
+        <div class="item-text">
+          Hellow this is the item i have been talking about, by the way this is junk text.
+        </div>
+        <hr/>
+        <div class="price">
+            Ghs 70
+        </div>
+        <div class="old-price">
+          Ghs 80
+        </div>
+        <div class="discount">
+          -50%
+        </div>
+        <hr/>
+        <div class="rating-orders">
+          <ion-row style="text-align: center">
+            <ion-col col-4 center>
+              <span class="text-medium">1</span><br/>
+              <span>starts</span>
+            </ion-col>
+            <ion-col col-4>
+                <span class="text-medium">2</span><br/>
+                <span>orders</span>
+            </ion-col>
+            <ion-col col-4>
+                <span class="text-medium">3</span><br/>
+                <span>wishlist</span>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <hr/>
+
+      </ion-card>
+
+      <ion-card style="padding:10px">
+        <a href="#" style="text-decoration: none; color:black">
+          <div>
+            Shipping : Ghs 3.00<br/>
+            <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 10px;color:gray">To Area Name Via Daabia Delivery</span>
+          </div>
+        </a>
+      </ion-card>
+
+      <ion-card>
+        <div class="">
+          <ion-item>
+              <div item-start *ngIf="selectedDetails == null">{{selectedS}}, {{SelectedC}}, {{selectedQuantity}}</div>
+              <div item-start *ngIf="selectedDetails != null">{{selectedDetails[0]}}, {{selectedDetails[1]}}, {{selectedDetails[2]}}</div>
+              <button ion-button color="primary" (click)="openSelectDetailsModal()" item-end>select</button>
+          </ion-item>
+          
+          <ion-item>
+            <button ion-button color="primary" item-start (click)="addToCart()">Add to Cart<ion-icon name="cart"></ion-icon></button>
+            <button ion-button color="danger" item-end (click)="openCheckout()"><ion-icon name="money">Buy</ion-icon></button>
+          </ion-item>
+        </div>
+      </ion-card>
+
+      <ion-card class="product-details-card">
+          <ion-item>
+            Product Details
+          </ion-item>
+          <ion-card-content>
+            <span class="title">Name: </span>
+            <span class="details">wwwwwwwwwwwwwwwwwwwww
+              wwwwwwwwwwwwwww
+              wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+              wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+              wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+            </span><br/>
+            <span class="title">Description: </span>
+            <span class="details">
+              ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+              ddddddddddddddddddddddddddddddddddddddddddddddd
+              dddddddddddddddddddddddddddddddddddddddddddddddddddddd
+              dddddddddddddddddddddddddddddddddddddddddddddddddd
+            </span><br/>
+            <span class="title">Type: </span>
+            <span class="details"> hhshhsggsggggggggggggs</span>
+            <br/>
+            <span class="title">Manufacturer :</span>
+            <span class="details">jyunkuhkunnnnnnnnnnnnnnnnuhnhhjubhnibbiuhbjhgbbbyhhhhhhhhhhhhhhhhbjbbbmubbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            </span>
+          </ion-card-content>
+
+          <ion-row class="cardfooter">
+            <ion-col>
+                  <p><button ion-button block color="primary" (click)="openHintModal()">View More</button> </p>
+            </ion-col>
+          </ion-row>
+
+        </ion-card>
+
+        <ion-card class="visit-store">
+          <ion-item>
+            Seller Store
+          </ion-item>
+        
+          <ion-card-content>
+            <div class="rating-orders">
+              <ion-row>
+                <ion-col col-4 *ngFor="let bs of bestSelling" class="bestselling-small">
+                    <a><img src={{bs.imgUrl}}></a>
+                    <span class="price1">GHS {{bs.price}}</span>
+                </ion-col>
+              </ion-row>
+               
+
+              <ion-row style="text-align: center">
+                <ion-col col-4>
+                  <span class="text-medium">1</span><br/>
+                  <span>starts</span>
+                </ion-col>
+                <ion-col col-4>
+                    <span class="text-medium">2</span><br/>
+                    <span>orders</span>
+                </ion-col>
+                <ion-col col-4>
+                    <span class="text-medium">3</span><br/>
+                    <span>wishlist</span>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-card-content>
+          <hr/>
+          <ion-row class="cardfooter">
+            <ion-col col-6>
+              <button ion-button (click)="openContactModal()">Contact Seller</button>
+            </ion-col>
+            <ion-col col-6>
+              <button ion-button (click)="gotoStore()">Visit Store</button>
+            </ion-col>
+          </ion-row>
+
+        </ion-card>
+
+        <ion-card >
+          <ion-item>
+            Similar Products
+          </ion-item>
+            <ion-card-content>
+              
+              <ion-grid class="products-grid">
+                <ion-row class="">
+                  <ion-col col-4 *ngFor="let p of products">
+                    <ion-card class="similar-products-card" style="padding-left:10px">
+                      <a style="text-decoration: none;color:black" (click)="productsDetails(p.id)" >
+                          <ion-card-content class="similar-products-card-content">
+                          <img src={{p.imgUrl}}>
+                          </ion-card-content>
+                          <span style="padding-left:10px;" class="price" style="font-size:10px">GHS 10.00</span> <br/>
+                          <span class="old-price">GHS 15.00</span>
+
+                      </a>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+    
+</ion-content>
+

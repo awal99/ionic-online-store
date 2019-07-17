@@ -1,0 +1,74 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{store[0].name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="store-barnna">
+      <img src={{imgUrl}}>
+  </div>
+  <div class="store-name">
+    <span><img src={{store[0].logo}}></span>
+    <p><span>{{store[0].name}}</span></p>
+  </div>
+
+  <div style="margin-top:20px" >
+    <ion-row style="text-align: center">
+        <ion-col col-4>
+          <span class="text-medium">1</span><br/>
+          <span>starts</span>
+        </ion-col>
+        <ion-col col-4>
+            <span class="text-medium">2</span><br/>
+            <span>orders</span>
+        </ion-col>
+        <ion-col col-4>
+            <span class="text-medium">3</span><br/>
+            <span>wishlist</span>
+        </ion-col>
+      </ion-row>
+      <hr/>
+  </div>
+
+  <ion-card *ngIf="discount != null">
+    <div class="discount-img">
+      <img src={{discount[0].imgUrl}}>
+    </div>
+   
+  </ion-card>
+  <div class="store-stats">
+      <span>{{discount[0].name}}</span>
+      <span>{{discount[0].percentOff}}% off</span>
+    </div>
+
+  <ion-card *ngIf="categories != null"class="category-select">
+    <ion-select [(ngModel)]="category" >
+      <ion-option okText="Ok" cancelText="Dismiss" *ngFor="let cat of categories" value={{cat.name}}>{{cat.name}}</ion-option>
+    </ion-select>
+  </ion-card>
+
+
+
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 *ngFor="let p of products">
+        <a (click)="productsDetails(p.id)">
+          <div class="store-products">
+              <img src={{p.imgUrl}}>
+              <span>{{p.name}}</span><br/>
+              <span class="price">Ghs {{p.price}}</span><br/>
+              <span class="old-price">Ghs 1500</span>
+          </div>
+        </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

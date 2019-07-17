@@ -1,0 +1,44 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>stores</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="stores-barnna">
+    <img src="assets/images/brand1.jpg">
+  </div>
+
+  <ion-card>
+    <ion-select [(ngModel)]="category">
+      <ion-option okText="Ok" cancelText="Dismiss" *ngFor="let catg of categories" value={{catg.id}}>{{catg.name}}</ion-option>
+    </ion-select>
+  </ion-card>
+
+  <ion-card *ngFor="let st of store">
+      <ion-row>
+        <ion-col col-2 style="height:20px"><img src={{st.logo}}></ion-col>
+        <ion-col col-10>{{st.name}}</ion-col>
+       
+        <ion-card-content style="background-color: lavender">
+        <ion-row>
+            <ion-col col-9 class="store-big-img"><a (click)="gotoProductDetails()"><img src={{st.imgs.img1}}></a></ion-col>
+            <ion-col col-3 class="store-small-img">
+              <div><a (click)="gotoProductDetails()"><img src={{st.imgs.img2}}></a></div>
+              <div><a (click)="gotoProductDetails()"><img src={{st.imgs.img3}}></a></div>
+            </ion-col>
+        </ion-row>
+        </ion-card-content>
+      
+      <a (click)="viewSingleStore(st.id)">
+        <ion-item center>Visit Store</ion-item>
+      </a>
+      </ion-row>
+    
+  </ion-card>
+
+</ion-content>

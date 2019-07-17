@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+            <ion-item class="seachbar-wrapper">
+                <span clear item-start class="header-title" *ngIf="showtitle==true"><ion-title>{{pagetitle}}</ion-title></span>
+                <ion-searchbar *ngIf="enableSearch==true" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
+                </ion-searchbar>
+                
+                <span clear item-end><a (click)="showSearch()" class="navbarSearch-btn"><ion-icon name="search"></ion-icon></a></span>
+            </ion-item>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+   <ion-grid class="page-menu-slider">
+        <ion-row nowrap style="padding-left: 7px">
+            <ion-col col-5 class="top-columns" *ngFor="let g of categories">
+                <a (click)="loadCategory(g.name)" >{{g.name}}</a>
+            </ion-col>
+        </ion-row>
+   </ion-grid>
+
+<ion-grid class="flash-deals-grid">
+        <ion-row class="">
+            <ion-col col-6 *ngFor="let catg of categories">
+            <ion-card class="flash-products-card">
+                <a style="text-decoration: none;color:black" (click)="productsDetails(catg.id)">
+                <ion-card-content class="flash-products-card-content">
+                <img src={{catg.imgUrl}}>
+                </ion-card-content>
+                <span class="price">GHS 10.00</span><br/>
+                <span class="new-price">GHS 15.00</span> | <span class="discount">50% off</span>
+                </a>
+            </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

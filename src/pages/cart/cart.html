@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Shopping Cart
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let product of products; let i=index" [attr.data-index]="i">
+      <ion-list >
+          <ion-list-header style="text-align: center;display: flex;box-shadow: 1px 0px 1px 2px gray;color:black">
+            <ion-checkbox (click)="onAllSelected(product.storeid,i)" [(ngModel)]="product.id"></ion-checkbox>
+            <ion-label>Items from {{product.storename}}</ion-label>
+          </ion-list-header>
+          
+            <ion-row *ngFor="let details of product.details; let j=index" [attr.data-index]="j" padding-left>
+              <ion-col col-2 style="display:flex;justify-content: center;padding-top:10px;width:17%;max-width: 17%;">
+                  <ion-checkbox [(ngModel)]="details.id" (click)="onSelected(details.pid)"></ion-checkbox>
+              </ion-col>
+              <ion-col col-4>
+                  <img src="assets/productsimgs/high-tech.png">
+              </ion-col>
+              <ion-col col-5>
+                <span class="discount">{{details.disc}}</span>
+              </ion-col>
+            </ion-row>
+          
+      </ion-list>
+  </ion-card>
+
+  <ion-footer class="actions-card">
+      <ion-item>
+        <span style="text-align: center">Sub-Total: GHS {{subtotal+shipping}}</span>
+      </ion-item>
+       <div>
+         <button ion-button full color="danger">Checkout<ion-icon name="cash"></ion-icon></button>
+       </div>
+     </ion-footer>
+</ion-content>

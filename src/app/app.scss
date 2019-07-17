@@ -1,0 +1,106 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.text-center {
+  text-align: center;
+}
+
+.radius {
+  border: none;
+  border-radius: 0.28571429rem;
+}
+.tab-button{
+  background-color: black;
+}
+.tab-button .tab-button-icon, .tab-button-text{
+  color: white;
+}
+.header .toolbar-background{
+  background-color:black;
+}
+.header .toolbar .item-md{
+  background-color:black;
+  padding:0px;
+}
+.header .toolbar{
+  padding:0px;
+}
+
+.header-title .toolbar-title-md{
+  color:white;
+}
+.navbarSearch-btn{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+// ion-tab.show-tab{
+//   margin-top: 55px;
+// }
+
+// search-bar customization
+// 
+.searchbar-md .searchbar-input{
+  background-color:black;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.toolbar .searchbar-md{
+  padding-left: 15px;
+  padding-top:3px;
+  padding-bottom: 3px;
+  padding-right: 3px;
+}
+
+.seachbar-wrapper .item-inner .input-wrapper .label-md{
+  margin:0px;
+}
+
+.searchbar-md-cancel, .searchbar-search-icon, .searchbar-clear-icon{
+  color:white;
+}
+//search edit end
+
+.item-md.item-block .item-inner{
+  border-bottom: none;
+}
+//making all header text and back button white
+.back-button .button-inner, .toolbar-title{
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.price{
+  
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.discount{
+  font-size: 12px;
+  padding-left: 0px;
+  color:dimgrey
+}
+.old-price{
+  font-size: 12px;
+  text-decoration: line-through;
+  color:dimgrey
+}
+

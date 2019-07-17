@@ -1,0 +1,32 @@
+page-stores {
+    .store-big-img{
+        padding:0px;
+        height:150px;
+        width:100%;
+    }
+    .store-big-img img{
+        width:100%;
+        height:100%;
+    }
+    .select-md{
+        max-width:100%;
+    }
+    .store-small-img{
+        padding-top:0px;
+    }
+    .store-small-img div{
+        width:100px;
+        height:70px;
+        max-width: 100px;
+        max-height: 80px;
+        margin-top:5px;
+    }
+    .store-small-img div img{
+        width:100%;
+        height:100%;
+    }
+    .stores-barnna img{
+        height: 150px;
+        width: 100%;
+    }
+}
